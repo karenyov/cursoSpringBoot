@@ -36,3 +36,5 @@ As configurações do banco de dados estão em: (src/main/resources)application.
 As configurações foram feitas via Heroku CLI.
 * Realizado download d [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 * Executado passo-a-passo do [Heroku](https://devcenter.heroku.com/articles/getting-started-with-java#set-up).
+
+obs: foi necessário realizar Maven Install para gerar arquivo war (cursoSpringBoot\target). Foi excluído as pastas dentro da /target e apenas mantido o arquivo cursoSpringBoot-0.0.1-SNAPSHOT.war.

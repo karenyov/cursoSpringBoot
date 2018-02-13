@@ -21,11 +21,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		
 		<dependency> <!-- MySQL -->
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency> <!-- PostgreSQL -->
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1201-jdbc4</version>
 		</dependency>
 		<dependency> <!-- Spring data -->
 			<groupId>org.springframework.boot</groupId>
