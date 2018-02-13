@@ -8,7 +8,8 @@ obs: preencher as informações necessárias de acordo com o projeto.
 
 * Caso o projeto apresente problemas e "warnings" Clicar com o botão direito no projeto e ir em:
 Java EE Tools > Generate Deployment Descriptor Sub
-obs: esse processo é necessário para criar o web.xml.
+
+- obs: esse processo é necessário para criar o web.xml.
 
 # Configuração realizada para rodar o projeto:
 * Ir em Run As > Maven build..., configuração:
