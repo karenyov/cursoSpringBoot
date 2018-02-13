@@ -18,4 +18,6 @@ Java EE Tools > Generate Deployment Descriptor Sub
 
 A aplicação subirá em http://localhost:8080 por padrão.
 
+* Dependências Frontend no pom.xml: https://www.webjars.org/
+
 
