@@ -24,3 +24,9 @@ Para atualizar as dependências, basta clicar com botão direito no projeto e ir
 - Maven > Update Project...
 
 
+# Configurações
+Todas as configurações de bibliotecas, Spring Data etc, são feitas em: (src/main/resources)application.properties
+
+
+# Banco de dados
+As configurações do banco de dados estão em: (src/main/resources)application.properties
