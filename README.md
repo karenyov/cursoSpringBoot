@@ -30,3 +30,9 @@ Todas as configurações de bibliotecas, Spring Data etc, são feitas em: (src/m
 
 # Banco de dados
 As configurações do banco de dados estão em: (src/main/resources)application.properties
+
+
+# Heroku
+As configurações foram feitas via Heroku CLI.
+* Realizado download d [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+* Executado passo-a-passo do [Heroku](https://devcenter.heroku.com/articles/getting-started-with-java#set-up).
