@@ -12,7 +12,15 @@
 		<h2>Lista de instituições cadastradas</h2>
 		<a href="/instituicoes/inserir" class="btn btn-primary">Criar nova
 			instituição</a>
-		<table class="table">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label>Instituição a ser pesquisada:</label> <input type="text"
+					id="pesquisa-instituicao" class="form-control" />
+				<button type="button" class="btn" id="btn-pesquisa-instituicao">
+					Pesquisar</button>
+			</div>
+		</div>
+		<table class="table" id="tbl-instituicoes">
 			<thead>
 				<th>Nome da instituição</th>
 				<th>Endereço</th>
@@ -33,6 +41,33 @@
 	<div th:replace="fragmentos/fragmentos :: footer"></div>
 	<script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#btn-pesquisa-instituicao').click(function(){
+				$.ajax({
+					method: 'GET',
+					url: '/instituicoes/pesquisarPorNome/' + $('#pesquisa-instituicao').val(),
+					success: function(data) {
+						$('#tbl-instituicoes tbody > tr').remove();
+						$.each(data, function(){
+							$('#tbl-instituicoes tbody').append(
+								'<tr>' +
+								'	<td>' + this.nome + '</td>' + 
+								'	<td>' + this.endereco + '</td>' + 
+								'	<td>' + 
+								'		<a href="/instituicoes/editar/' + this.id + '">Editar</a> |' +
+								'		<a href="/instituicoes/excluir/' + this.id + '">Excluir</a>' +
+								'	</td>' + 
+								'</tr>'
+							);
+						});
+					},
+					error: function() {
+						alert('Não foi possível realizar a pesquisa.');
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>
